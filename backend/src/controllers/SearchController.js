@@ -10,13 +10,13 @@ module.exports = {
             techs: {
                 $in: techsArray,
             },
-            locations: {
+            location: {
                 $near: {
                     $geometry: {
                         type:  'Point',
                         coordinates: [longitude, latitude],
                     },
-                    $maxDistance: 10000,
+                    $maxDistance: 50000,
                 }
             }
         })
